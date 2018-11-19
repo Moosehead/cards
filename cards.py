@@ -23,9 +23,10 @@ class Card():
 		return str(num_val) + " of " + str(self.suit).split('.')[1]
 
 class Deck():
-	cards = []
+	cards = None
 
 	def __init__(self):
+		self.cards = []
 		for i in range(0, 13):
 			self.cards.append(Card(Suit.Hearts, i + 1))
 			self.cards.append(Card(Suit.Spades, i + 1))
@@ -66,10 +67,10 @@ class Deck():
 			self.cards[i] = swap_card
 
 class Hand():
-	cards = []
+	cards = None
 
 	def __init__(self):
-		return
+		self.cards = []
 
 	def __str__(self):
 		ret_val = ""
